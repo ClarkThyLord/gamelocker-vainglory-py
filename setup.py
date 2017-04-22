@@ -6,7 +6,7 @@ with open("README.txt", "r") as txt:
 setup(
 
     name="madglory-ezl",
-    version="0.5.1",
+    version="0.5.2",
     author="ClarkthyLord",
     author_email="clark71@outlook.com",
     url="https://github.com/ClarkThyLord/madglory-ezl",
