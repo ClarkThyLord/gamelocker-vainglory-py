@@ -13,7 +13,7 @@ setup(
     keywords="madglory python 3.5 vainglory",
     description="A python wrapper for MadlGlory's gamelocker.",
     long_description=long_description,
-    package=["madglory-ezl"],
+    packages=["madglory-ezl"],
     install_requires=[
 
         "requests"
