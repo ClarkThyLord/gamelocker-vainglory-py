@@ -1,9 +1,0 @@
-README.txt
-setup.py
-gamelocker/__init__.py
-gamelocker/wrapper.py
-gamelocker.egg-info/PKG-INFO
-gamelocker.egg-info/SOURCES.txt
-gamelocker.egg-info/dependency_links.txt
-gamelocker.egg-info/requires.txt
-gamelocker.egg-info/top_level.txt
