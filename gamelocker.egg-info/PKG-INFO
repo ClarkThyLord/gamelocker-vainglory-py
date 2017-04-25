@@ -1,0 +1,15 @@
+Metadata-Version: 1.0
+Name: gamelocker
+Version: 0.5.4
+Summary: A python3.5 wrapper for MadlGlory's gamelocker.
+Home-page: https://github.com/ClarkThyLord/gamelocker
+Author: ClarkthyLord
+Author-email: clark71@outlook.com
+License: UNKNOWN
+Description: MadGlory Gamelocker API wrapper made in python, 3.5+. Focusing on the Vainglory title.
+        
+        Install with pip:
+        pip madglory-ezl
+        
+Keywords: madglory python 3.5 vainglory
+Platform: UNKNOWN

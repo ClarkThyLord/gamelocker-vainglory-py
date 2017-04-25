@@ -6,7 +6,7 @@ with open("README.txt", "r") as txt:
 setup(
 
     name="gamelocker",
-    version="0.5.3",
+    version="0.5.4",
     author="ClarkthyLord",
     author_email="clark71@outlook.com",
     url="https://github.com/ClarkThyLord/gamelocker",
