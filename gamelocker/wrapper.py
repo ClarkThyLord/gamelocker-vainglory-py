@@ -80,7 +80,7 @@ class Vainglory(object):
             Match.append(
                 {
                     "id": part["id"],
-                    "type": part["type"],
+                    "shardId": part["attributes"]["shardId"],
                     "gameMode": part["attributes"]["gameMode"],
                     "endGameReason": part["attributes"]["stats"]["endGameReason"],
                     "createdAt": part["attributes"]["createdAt"],
@@ -148,6 +148,8 @@ class Vainglory(object):
             elif part["type"] == "player":
                 players[str(part["id"])] = {
 
+                    "id": part["id"],
+                    "shardId": part["attributes"]["shardId"],
                     "name": part["attributes"]["name"],
                     "level": part["attributes"]["stats"]["level"],
                     "xp": part["attributes"]["stats"]["xp"],
@@ -169,8 +171,6 @@ class Vainglory(object):
                     "URL": part["attributes"]["URL"]
 
                 }
-
-                pass
 
             else:
                 print(part)
@@ -194,7 +194,8 @@ class Vainglory(object):
                 full.append(ros)
 
             r["rosters"] = full
-            
+            r["telemetry"] = assets[r["telemetry"]]
+
         return Match
 
     def _getMatches(self, region="na", endpoint="matches", args=None):
@@ -218,7 +219,7 @@ class Vainglory(object):
                 Matches.append(
                     {
                         "id": part["id"],
-                        "type": part["type"],
+                        "shardId": part["attributes"]["shardId"],
                         "gameMode": part["attributes"]["gameMode"],
                         "endGameReason": part["attributes"]["stats"]["endGameReason"],
                         "createdAt": part["attributes"]["createdAt"],
@@ -286,6 +287,8 @@ class Vainglory(object):
             elif part["type"] == "player":
                 players[str(part["id"])] = {
 
+                    "id": part["id"],
+                    "shardId": part["attributes"]["shardId"],
                     "name": part["attributes"]["name"],
                     "level": part["attributes"]["stats"]["level"],
                     "xp": part["attributes"]["stats"]["xp"],
@@ -308,8 +311,6 @@ class Vainglory(object):
 
                 }
 
-                pass
-
             else:
                 print(part)
 
@@ -330,9 +331,9 @@ class Vainglory(object):
                 ros["participants"] = par
 
                 full.append(ros)
-                # del rosters[ro]
 
             r["rosters"] = full
+            r["telemetry"] = assets[r["telemetry"]]
 
         return Matches
 
@@ -352,9 +353,9 @@ class Vainglory(object):
 
         player = {
             "id": data["id"],
+            "shardId": data["attributes"]["shardId"],
             "createdAt": data["attributes"]["createdAt"],
             "name": data["attributes"]["name"],
-            "shardId": data["attributes"]["shardId"],
             "level": data["attributes"]["stats"]["level"],
             "lifetimeGold": data["attributes"]["stats"]["lifetimeGold"],
             "lossStreak": data["attributes"]["stats"]["lossStreak"],
@@ -377,7 +378,7 @@ class Vainglory(object):
 
         """
 
-        original =  self._req("shards/" + str(region) + "/" + str(endpoint) + "/", args)
+        original = self._req("shards/" + str(region) + "/" + str(endpoint) + "/", args)
 
         data = original["data"]
 
@@ -387,9 +388,9 @@ class Vainglory(object):
             players.append(
                 {
                     "id": part["id"],
+                    "shardId": part["attributes"]["shardId"],
                     "createdAt": part["attributes"]["createdAt"],
                     "name": part["attributes"]["name"],
-                    "shardId": part["attributes"]["shardId"],
                     "level": part["attributes"]["stats"]["level"],
                     "lifetimeGold": part["attributes"]["stats"]["lifetimeGold"],
                     "lossStreak": part["attributes"]["stats"]["lossStreak"],
