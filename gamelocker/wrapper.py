@@ -1,8 +1,8 @@
 """This is where all the magic happens.
 
 Reference:
-https://developer.vainglorygame.com/docs
 http://docs.python-requests.org/en/master/
+https://github.com/ClarkThyLord/madglory-ezl/wiki
 
 """
 
@@ -10,12 +10,21 @@ import logging  # To long events
 import requests  # To call on services
 
 class Vainglory(object):
+    """
+
+    Makes it easy and simple to retrieve data related to Vainglory from Mag Glory's gamelocker.
+
+    Reference:
+    https://developer.vainglorygame.com/docs
+    https://github.com/ClarkThyLord/madglory-ezl/wiki/Vainglory
+
+    """
 
     def __init__(self, key, dataCenter="dc01"):
         """At creation of this object setup variables.
 
-        :argument key: API key used to access data | Get your own VG API key at https://developer.vainglorygame.com/
-        :argument dataCenter: The data center that object should connect to; Default: dc01, Options: dc01
+        :param key: API key used to access data | Get your own VG API key at https://developer.vainglorygame.com/
+        :param dataCenter: The data center that object should connect to; Default: dc01, Options: dc01
 
         """
 
@@ -25,8 +34,8 @@ class Vainglory(object):
     def _req(self, endpoint, args):
         """Request the data from Vainglory.
 
-        :argument args: argss used to fetch appropriate data.
-        :argument endpoint: Where do you wanna call this data from.
+        :param args: args used to fetch appropriate data.
+        :param endpoint: Where do you wanna call this data from.
         :returns: JSONs, in a list, with what you've requested.
 
         """
@@ -63,9 +72,9 @@ class Vainglory(object):
     def _getMatch(self, region="na", endpoint="matches", elementID=""):
         """Get data from api.
 
-        :argument region: Region from which to pull data from.
-        :argument endpoint: What type of data you would like to pull.
-        :argument elementID: ID of element you are specifying for.
+        :param region: Region from which to pull data from.
+        :param endpoint: What type of data you would like to pull.
+        :param elementID: ID of element you are specifying for.
         :returns: Dictionary with requested data; None if error occurred!
 
         """
@@ -201,9 +210,9 @@ class Vainglory(object):
     def _getMatches(self, region="na", endpoint="matches", args=None):
         """Get data from api.
 
-        :argument region: Region from which to pull data from.
-        :argument endpoint: What type of data you would like to pull.
-        :argument args: Parameters, args, used to args data with.
+        :param region: Region from which to pull data from.
+        :param endpoint: What type of data you would like to pull.
+        :param args: Parameters, args, used to args data with.
         :returns: List of dictionaries with requested data; None if error occurred!
 
         """
@@ -340,9 +349,9 @@ class Vainglory(object):
     def _getPlayer(self, region="na", endpoint="matches", elementID=""):
         """Get data from api.
 
-        :argument region: Region from which to pull data from.
-        :argument endpoint: What type of data you would like to pull.
-        :argument elementID: ID of element you are specifying for.
+        :param region: Region from which to pull data from.
+        :param endpoint: What type of data you would like to pull.
+        :param elementID: ID of element you are specifying for.
         :returns: Dictionary with requested data; None if error occurred!
 
         """
@@ -371,9 +380,9 @@ class Vainglory(object):
     def _getPlayers(self, region="na", endpoint="matches", args=None):
         """Get data from api.
 
-        :argument region: Region from which to pull data from.
-        :argument endpoint: What type of data you would like to pull.
-        :argument args: Parameters, args, used to args data with.
+        :param region: Region from which to pull data from.
+        :param endpoint: What type of data you would like to pull.
+        :param args: Parameters, args, used to args data with.
         :returns: List with requested data; None if error occurred!
 
         """
@@ -407,9 +416,9 @@ class Vainglory(object):
     def _getSamples(self, region="na", endpoint="samples", args=None):
         """Get data from api.
 
-        :argument region: Region from which to pull data from.
-        :argument endpoint: What type of data you would like to pull.
-        :argument args: Parameters, args, used to args data with.
+        :param region: Region from which to pull data from.
+        :param endpoint: What type of data you would like to pull.
+        :param args: Parameters, args, used to args data with.
         :returns: List of/A dictionary(s) with requested data; None if error occurred!
 
         """
@@ -419,7 +428,7 @@ class Vainglory(object):
     def dict_to_object(self, dictionary):
         """Convert a dictionary to a object.
 
-        :argument dictionary: Dictionary that will be converted to an object.
+        :param dictionary: Dictionary that will be converted to an object.
         :returns: Object of dictionary.
 
         """
@@ -525,7 +534,7 @@ class Vainglory(object):
     def telemetry(self, url):
         """Used to fetch telemetry JSON.
 
-        :argument url: Link to telemetry; Reference: https://developer.vainglorygame.com/docs#to-get-telemetry-data
+        :param url: Link to telemetry; Reference: https://developer.vainglorygame.com/docs#to-get-telemetry-data
         :returns: Dictionary with telemetry data.
 
         """
@@ -534,10 +543,19 @@ class Vainglory(object):
 
 
 class DictObject(object):
+    """
+
+    Convert a dictionary to a object.
+
+    Reference:
+    https://github.com/ClarkThyLord/madglory-ezl/wiki/DictObject
+
+    """
+
     def __init__(self, dictionary):
         """Set up variables at creating of object.
 
-        :argument dictionary: Dictionary to convert to object
+        :param dictionary: Dictionary to convert to object
         :returns: Object of dictionary
 
         """
