@@ -2,13 +2,13 @@ from setuptools import setup
 
 setup(
 
-    name="gamelocker",
-    version="0.5.5",
+    name="madglory-ezl",
+    version="0.5.6",
     author="ClarkthyLord",
     author_email="clark71@outlook.com",
-    url="https://github.com/ClarkThyLord/gamelocker",
-    description="A python3 wrapper for MadGlory's gamelocker.",
-    keywords="madglory python 3.5 vainglory",
+    url="https://github.com/ClarkThyLord/madglory-ezl",
+    description="A python wrapper for MadGlory's APIs; like gamelocker.",
+    keywords="madglory python python3 vainglory",
     packages=["gamelocker"],
     install_requires=["requests"]
 
