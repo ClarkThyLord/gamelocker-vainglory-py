@@ -1,0 +1,8 @@
+setup.py
+gamelocker/__init__.py
+gamelocker/wrapper.py
+madglory_ezl.egg-info/PKG-INFO
+madglory_ezl.egg-info/SOURCES.txt
+madglory_ezl.egg-info/dependency_links.txt
+madglory_ezl.egg-info/requires.txt
+madglory_ezl.egg-info/top_level.txt

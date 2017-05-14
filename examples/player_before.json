@@ -2,19 +2,21 @@
 
     "data": {
         "type": "player",
-        "id": "c1a766d4-ada9-11e4-8212-06eb725f8a76",
+        "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76",
         "attributes": {
-            "createdAt": "2017-04-25T19:53:46Z",
-            "name": "EDGENESIS",
+            "createdAt": "2017-05-14T07:25:08Z",
+            "name": "ClarkthyLord",
             "shardId": "na",
             "stats": {
+                "karmaLevel": 1,
                 "level": 30,
-                "lifetimeGold": 14256.125,
+                "lifetimeGold": 14564.875,
                 "lossStreak": 0,
-                "played": 1874,
-                "played_ranked": 971,
-                "winStreak": 3,
-                "wins": 1137,
+                "played": 2802,
+                "played_ranked": 870,
+                "skillTier": 21,
+                "winStreak": 0,
+                "wins": 1336,
                 "xp": 175450
             },
             "titleId": "semc-vainglory"
@@ -24,6 +26,10 @@
                 "data": [ ]
             }
         }
-    }
+    },
+    "links": {
+        "self": "https://api.dc01.gamelockerapp.com/shards/na/players/99b050b8-cd6b-11e5-b233-06eb725f8a76"
+    },
+    "meta": { }
 
 }

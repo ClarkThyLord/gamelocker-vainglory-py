@@ -3,44 +3,21 @@
     "data": [
         {
             "type": "player",
-            "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76",
+            "id": "c0ff0702-9f78-11e5-a587-06b48b82cd49",
             "attributes": {
-                "createdAt": "2017-04-25T02:56:38Z",
-                "name": "ClarkthyLord",
+                "createdAt": "2017-05-12T06:25:32Z",
+                "name": "jeovanne",
                 "shardId": "na",
                 "stats": {
+                    "karmaLevel": 1,
                     "level": 30,
-                    "lifetimeGold": 17386.375,
-                    "lossStreak": 1,
-                    "played": 2260,
-                    "played_ranked": 494,
-                    "winStreak": 0,
-                    "wins": 1300,
-                    "xp": 175450
-                },
-                "titleId": "semc-vainglory"
-            },
-            "relationships": {
-                "assets": {
-                    "data": [ ]
-                }
-            }
-        },
-        {
-            "type": "player",
-            "id": "191f0736-d52d-11e5-85cb-06d90c28bf1a",
-            "attributes": {
-                "createdAt": "2017-04-25T17:38:27Z",
-                "name": "AmethystCrow",
-                "shardId": "na",
-                "stats": {
-                    "level": 30,
-                    "lifetimeGold": 14270.5,
+                    "lifetimeGold": 13284.3330078125,
                     "lossStreak": 0,
-                    "played": 1576,
-                    "played_ranked": 272,
-                    "winStreak": 2,
-                    "wins": 1007,
+                    "played": 1226,
+                    "played_ranked": 1095,
+                    "skillTier": 15,
+                    "winStreak": 0,
+                    "wins": 667,
                     "xp": 175450
                 },
                 "titleId": "semc-vainglory"
@@ -55,17 +32,73 @@
             "type": "player",
             "id": "512312d8-38cc-11e5-954c-0628b69bf6d1",
             "attributes": {
-                "createdAt": "2017-04-25T18:31:59Z",
+                "createdAt": "2017-05-12T18:29:13Z",
                 "name": "BryceHi",
                 "shardId": "na",
                 "stats": {
+                    "karmaLevel": 1,
                     "level": 30,
-                    "lifetimeGold": 12947.666015625,
-                    "lossStreak": 1,
-                    "played": 1224,
-                    "played_ranked": 709,
+                    "lifetimeGold": 13921.6630859375,
+                    "lossStreak": 0,
+                    "played": 1934,
+                    "played_ranked": 1545,
+                    "skillTier": 10,
                     "winStreak": 0,
-                    "wins": 782,
+                    "wins": 792,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76",
+            "attributes": {
+                "createdAt": "2017-05-14T07:25:08Z",
+                "name": "ClarkthyLord",
+                "shardId": "na",
+                "stats": {
+                    "karmaLevel": 1,
+                    "level": 30,
+                    "lifetimeGold": 14564.875,
+                    "lossStreak": 0,
+                    "played": 2802,
+                    "played_ranked": 870,
+                    "skillTier": 21,
+                    "winStreak": 0,
+                    "wins": 1336,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "191f0736-d52d-11e5-85cb-06d90c28bf1a",
+            "attributes": {
+                "createdAt": "2017-05-14T08:46:01Z",
+                "name": "AmethystCrow",
+                "shardId": "na",
+                "stats": {
+                    "karmaLevel": 1,
+                    "level": 30,
+                    "lifetimeGold": 12637.5,
+                    "lossStreak": 0,
+                    "played": 1885,
+                    "played_ranked": 1557,
+                    "skillTier": 20,
+                    "winStreak": 0,
+                    "wins": 1067,
                     "xp": 175450
                 },
                 "titleId": "semc-vainglory"
@@ -76,6 +109,10 @@
                 }
             }
         }
-    ]
+    ],
+    "links": {
+        "self": "https://api.dc01.gamelockerapp.com/shards/na/players"
+    },
+    "meta": { }
 
 }

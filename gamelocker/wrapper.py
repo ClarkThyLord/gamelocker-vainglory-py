@@ -8,6 +8,7 @@ https://github.com/ClarkThyLord/madglory-ezl/wiki
 
 import logging  # To long events
 import requests  # To call on services
+import json
 
 class Vainglory(object):
     """
@@ -63,6 +64,9 @@ class Vainglory(object):
 
                 else:
                     break
+
+            with open("before.json", "w") as handler:
+                json.dump(http.json(), handler)
 
             return http.json()
 
@@ -231,11 +235,14 @@ class Vainglory(object):
             data = [original["data"]]
             included = original["included"]
 
-            Matches = []
+            matchOrder = {}
+            MatchesBefore = {}
             for cluster in data:
                 for part in cluster:
-                    Matches.append(
-                        {
+                    matchOrder[part["id"]] = part["attributes"]["createdAt"]
+
+                    MatchesBefore[part["id"]] = {
+
                             "id": part["id"],
                             "shardId": part["attributes"]["shardId"],
                             "gameMode": part["attributes"]["gameMode"],
@@ -247,8 +254,14 @@ class Vainglory(object):
                                 part["relationships"]["rosters"]["data"][1]["id"]
                             ],
                             "telemetry": part["relationships"]["assets"]["data"][0]["id"]
+
                         }
-                    )
+
+            matchOrder = sorted(matchOrder, key=lambda k: matchOrder[k], reverse=True)
+
+            Matches = []
+            for matchId in matchOrder:
+                Matches.append(MatchesBefore[matchId])
 
             rosters = {}
             participants = {}
@@ -332,9 +345,9 @@ class Vainglory(object):
                 else:
                     print(part)
 
-            for r in Matches:
+            for m in Matches:
                 full = []
-                for ro in r["rosters"]:
+                for ro in m["rosters"]:
                     ros = rosters[ro]
                     par = []
                     for p in ros["participants"]:
@@ -350,8 +363,8 @@ class Vainglory(object):
 
                     full.append(ros)
 
-                r["rosters"] = full
-                r["telemetry"] = assets[r["telemetry"]]
+                m["rosters"] = full
+                m["telemetry"] = assets[m["telemetry"]]
 
             return Matches
 
@@ -390,6 +403,15 @@ class Vainglory(object):
                 "xp": data["attributes"]["stats"]["xp"],
             }
 
+            try:
+
+                player["skillTier"] = data["attributes"]["stats"]["skillTier"]
+                player["karmaLevel"] = data["attributes"]["stats"]["karmaLevel"]
+
+            except:
+                player["skillTier"] = None
+                player["karmaLevel"] = None
+
             return player
 
         except Exception as e:
@@ -414,9 +436,7 @@ class Vainglory(object):
 
             players = []
             for part in data:
-
-                players.append(
-                    {
+                    info = {
                         "id": part["id"],
                         "shardId": part["attributes"]["shardId"],
                         "createdAt": part["attributes"]["createdAt"],
@@ -430,7 +450,17 @@ class Vainglory(object):
                         "wins": part["attributes"]["stats"]["wins"],
                         "xp": part["attributes"]["stats"]["xp"],
                     }
-                )
+
+                    try:
+
+                        info["skillTier"] = part["attributes"]["stats"]["skillTier"]
+                        info["karmaLevel"] = part["attributes"]["stats"]["karmaLevel"]
+
+                    except:
+                        info["skillTier"] = None
+                        info["karmaLevel"] = None
+
+                    players.append(info)
 
             return players
 
