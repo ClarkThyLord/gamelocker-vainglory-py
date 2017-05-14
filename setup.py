@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
 
     name="madglory-ezl",
-    version="0.6.2",
+    version="0.6.3",
     author="ClarkthyLord",
     author_email="clark71@outlook.com",
     url="https://github.com/ClarkThyLord/madglory-ezl",
