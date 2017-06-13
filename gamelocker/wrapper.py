@@ -8,7 +8,7 @@ https://github.com/ClarkThyLord/madglory-ezl/wiki
 
 import logging  # To long events
 import requests  # To call on services
-import json
+import json  # To save jsons
 
 class Vainglory(object):
     """
@@ -21,7 +21,7 @@ class Vainglory(object):
 
     """
 
-    def __init__(self, key, dataCenter="dc01"):
+    def __init__(self, key, dataCenter="dc01", debugging=False):
         """At creation of this object setup variables.
 
         :param key: API key used to access data | Get your own VG API key at https://developer.vainglorygame.com/
@@ -31,6 +31,7 @@ class Vainglory(object):
 
         self.key = key
         self.dataCenter = dataCenter
+        self.debugging = debugging
 
     def _req(self, endpoint, args):
         """Request the data from Vainglory.
@@ -65,8 +66,9 @@ class Vainglory(object):
                 else:
                     break
 
-            with open("before.json", "w") as handler:
-                json.dump(http.json(), handler)
+            if self.debugging == True:
+                with open("before.json", "w") as handler:
+                    json.dump(http.json(), handler)
 
             return http.json()
 
@@ -93,21 +95,30 @@ class Vainglory(object):
 
             Match = []
             for part in data:
-                Match.append(
-                    {
-                        "id": part["id"],
-                        "shardId": part["attributes"]["shardId"],
-                        "gameMode": part["attributes"]["gameMode"],
-                        "endGameReason": part["attributes"]["stats"]["endGameReason"],
-                        "createdAt": part["attributes"]["createdAt"],
-                        "duration": part["attributes"]["duration"],
-                        "rosters": [
-                            part["relationships"]["rosters"]["data"][0]["id"],
-                            part["relationships"]["rosters"]["data"][1]["id"]
-                        ],
-                        "telemetry": part["relationships"]["assets"]["data"][0]["id"]
-                    }
-                )
+                data = {
+
+                    "id": part["id"],
+                    "shardId": part["attributes"]["shardId"],
+                    "gameMode": part["attributes"]["gameMode"],
+                    "endGameReason": part["attributes"]["stats"]["endGameReason"],
+                    "createdAt": part["attributes"]["createdAt"],
+                    "duration": part["attributes"]["duration"],
+                    "rosters": [
+                        part["relationships"]["rosters"]["data"][0]["id"],
+                        part["relationships"]["rosters"]["data"][1]["id"]
+                    ],
+                    "telemetry": part["relationships"]["assets"]["data"][0]["id"]
+
+                }
+
+                try:
+
+                    data["patchVersion"] = part["attributes"]["patchVersion"]
+
+                except:
+                    data["patchVersion"] = None
+
+                Match.append(data)
 
             rosters = {}
             participants = {}
@@ -131,35 +142,43 @@ class Vainglory(object):
                         rosters[str(part["id"])]["participants"].append(participant["id"])
 
                 elif part["type"] == "participant":
-                    participants[str(part["id"])] = {
+                    if "spectator" in part["attributes"]["actor"]:
+                        participants[str(part["id"])] = {
 
-                        "actor": part["attributes"]["actor"],
-                        "kills": part["attributes"]["stats"]["kills"],
-                        "jungleKills": part["attributes"]["stats"]["jungleKills"],
-                        "assists": part["attributes"]["stats"]["assists"],
-                        "deaths": part["attributes"]["stats"]["deaths"],
-                        "farm": part["attributes"]["stats"]["farm"],
-                        "gold": part["attributes"]["stats"]["gold"],
-                        "turretCaptures": part["attributes"]["stats"]["turretCaptures"],
-                        "crystalMineCaptures": part["attributes"]["stats"]["crystalMineCaptures"],
-                        "goldMineCaptures": part["attributes"]["stats"]["goldMineCaptures"],
-                        "krakenCaptures": part["attributes"]["stats"]["krakenCaptures"],
-                        "minionKills": part["attributes"]["stats"]["minionKills"],
-                        "nonJungleMinionKills": part["attributes"]["stats"]["nonJungleMinionKills"],
-                        "level": part["attributes"]["stats"]["level"],
-                        "skillTier": part["attributes"]["stats"]["skillTier"],
-                        "karmaLevel": part["attributes"]["stats"]["karmaLevel"],
-                        "wentAfk": part["attributes"]["stats"]["wentAfk"],
-                        "firstAfkTime": part["attributes"]["stats"]["firstAfkTime"],
-                        "winner": part["attributes"]["stats"]["winner"],
-                        "skinKey": part["attributes"]["stats"]["skinKey"],
-                        "items": part["attributes"]["stats"]["items"],
-                        "itemGrants": part["attributes"]["stats"]["itemGrants"],
-                        "itemSells": part["attributes"]["stats"]["itemSells"],
-                        "itemUses": part["attributes"]["stats"]["itemUses"],
-                        "player": str(part["relationships"]["player"]["data"]["id"])
+                            "player": str(part["relationships"]["player"]["data"]["id"])
 
-                    }
+                        }
+
+                    else:
+                        participants[str(part["id"])] = {
+
+                            "actor": part["attributes"]["actor"],
+                            "kills": part["attributes"]["stats"]["kills"],
+                            "jungleKills": part["attributes"]["stats"]["jungleKills"],
+                            "assists": part["attributes"]["stats"]["assists"],
+                            "deaths": part["attributes"]["stats"]["deaths"],
+                            "farm": part["attributes"]["stats"]["farm"],
+                            "gold": part["attributes"]["stats"]["gold"],
+                            "turretCaptures": part["attributes"]["stats"]["turretCaptures"],
+                            "crystalMineCaptures": part["attributes"]["stats"]["crystalMineCaptures"],
+                            "goldMineCaptures": part["attributes"]["stats"]["goldMineCaptures"],
+                            "krakenCaptures": part["attributes"]["stats"]["krakenCaptures"],
+                            "minionKills": part["attributes"]["stats"]["minionKills"],
+                            "nonJungleMinionKills": part["attributes"]["stats"]["nonJungleMinionKills"],
+                            "level": part["attributes"]["stats"]["level"],
+                            "skillTier": part["attributes"]["stats"]["skillTier"],
+                            "karmaLevel": part["attributes"]["stats"]["karmaLevel"],
+                            "wentAfk": part["attributes"]["stats"]["wentAfk"],
+                            "firstAfkTime": part["attributes"]["stats"]["firstAfkTime"],
+                            "winner": part["attributes"]["stats"]["winner"],
+                            "skinKey": part["attributes"]["stats"]["skinKey"],
+                            "items": part["attributes"]["stats"]["items"],
+                            "itemGrants": part["attributes"]["stats"]["itemGrants"],
+                            "itemSells": part["attributes"]["stats"]["itemSells"],
+                            "itemUses": part["attributes"]["stats"]["itemUses"],
+                            "player": str(part["relationships"]["player"]["data"]["id"])
+
+                        }
 
                 elif part["type"] == "player":
                     players[str(part["id"])] = {
@@ -212,10 +231,14 @@ class Vainglory(object):
                 r["rosters"] = full
                 r["telemetry"] = assets[r["telemetry"]]
 
+            if self.debugging == True:
+                with open("after.json", "w") as handler:
+                    json.dump(Match, handler)
+
             return Match
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING MATCH --!>")
+            print("<!-- ERROR WHILE FETCHING MATCH --!>\nERROR:\n" + str(e))
             return {"from": "match", "error": str(e)}
 
     def _getMatches(self, region="na", endpoint="matches", args=None):
@@ -241,21 +264,31 @@ class Vainglory(object):
                 for part in cluster:
                     matchOrder[part["id"]] = part["attributes"]["createdAt"]
 
-                    MatchesBefore[part["id"]] = {
+                    # Get the matches data
+                    data = {
 
-                            "id": part["id"],
-                            "shardId": part["attributes"]["shardId"],
-                            "gameMode": part["attributes"]["gameMode"],
-                            "endGameReason": part["attributes"]["stats"]["endGameReason"],
-                            "createdAt": part["attributes"]["createdAt"],
-                            "duration": part["attributes"]["duration"],
-                            "rosters": [
-                                part["relationships"]["rosters"]["data"][0]["id"],
-                                part["relationships"]["rosters"]["data"][1]["id"]
-                            ],
-                            "telemetry": part["relationships"]["assets"]["data"][0]["id"]
+                        "id": part["id"],
+                        "shardId": part["attributes"]["shardId"],
+                        "gameMode": part["attributes"]["gameMode"],
+                        "endGameReason": part["attributes"]["stats"]["endGameReason"],
+                        "createdAt": part["attributes"]["createdAt"],
+                        "duration": part["attributes"]["duration"],
+                        "rosters": [
+                            part["relationships"]["rosters"]["data"][0]["id"],
+                            part["relationships"]["rosters"]["data"][1]["id"]
+                        ],
+                        "telemetry": part["relationships"]["assets"]["data"][0]["id"]
 
-                        }
+                    }
+
+                    try:
+
+                        data["patchVersion"] = part["attributes"]["patchVersion"]
+
+                    except:
+                        data["patchVersion"] = None
+
+                    MatchesBefore[part["id"]] = data
 
             matchOrder = sorted(matchOrder, key=lambda k: matchOrder[k], reverse=True)
 
@@ -285,35 +318,43 @@ class Vainglory(object):
                         rosters[str(part["id"])]["participants"].append(participant["id"])
 
                 elif part["type"] == "participant":
-                    participants[str(part["id"])] = {
+                    if "spectator" in part["attributes"]["actor"]:
+                        participants[str(part["id"])] = {
 
-                        "actor": part["attributes"]["actor"],
-                        "kills": part["attributes"]["stats"]["kills"],
-                        "jungleKills": part["attributes"]["stats"]["jungleKills"],
-                        "assists": part["attributes"]["stats"]["assists"],
-                        "deaths": part["attributes"]["stats"]["deaths"],
-                        "farm": part["attributes"]["stats"]["farm"],
-                        "gold": part["attributes"]["stats"]["gold"],
-                        "turretCaptures": part["attributes"]["stats"]["turretCaptures"],
-                        "crystalMineCaptures": part["attributes"]["stats"]["crystalMineCaptures"],
-                        "goldMineCaptures": part["attributes"]["stats"]["goldMineCaptures"],
-                        "krakenCaptures": part["attributes"]["stats"]["krakenCaptures"],
-                        "minionKills": part["attributes"]["stats"]["minionKills"],
-                        "nonJungleMinionKills": part["attributes"]["stats"]["nonJungleMinionKills"],
-                        "level": part["attributes"]["stats"]["level"],
-                        "skillTier": part["attributes"]["stats"]["skillTier"],
-                        "karmaLevel": part["attributes"]["stats"]["karmaLevel"],
-                        "wentAfk": part["attributes"]["stats"]["wentAfk"],
-                        "firstAfkTime": part["attributes"]["stats"]["firstAfkTime"],
-                        "winner": part["attributes"]["stats"]["winner"],
-                        "skinKey": part["attributes"]["stats"]["skinKey"],
-                        "items": part["attributes"]["stats"]["items"],
-                        "itemGrants": part["attributes"]["stats"]["itemGrants"],
-                        "itemSells": part["attributes"]["stats"]["itemSells"],
-                        "itemUses": part["attributes"]["stats"]["itemUses"],
-                        "player": str(part["relationships"]["player"]["data"]["id"])
+                            "player": str(part["relationships"]["player"]["data"]["id"])
 
-                    }
+                        }
+
+                    else:
+                        participants[str(part["id"])] = {
+
+                            "actor": part["attributes"]["actor"],
+                            "kills": part["attributes"]["stats"]["kills"],
+                            "jungleKills": part["attributes"]["stats"]["jungleKills"],
+                            "assists": part["attributes"]["stats"]["assists"],
+                            "deaths": part["attributes"]["stats"]["deaths"],
+                            "farm": part["attributes"]["stats"]["farm"],
+                            "gold": part["attributes"]["stats"]["gold"],
+                            "turretCaptures": part["attributes"]["stats"]["turretCaptures"],
+                            "crystalMineCaptures": part["attributes"]["stats"]["crystalMineCaptures"],
+                            "goldMineCaptures": part["attributes"]["stats"]["goldMineCaptures"],
+                            "krakenCaptures": part["attributes"]["stats"]["krakenCaptures"],
+                            "minionKills": part["attributes"]["stats"]["minionKills"],
+                            "nonJungleMinionKills": part["attributes"]["stats"]["nonJungleMinionKills"],
+                            "level": part["attributes"]["stats"]["level"],
+                            "skillTier": part["attributes"]["stats"]["skillTier"],
+                            "karmaLevel": part["attributes"]["stats"]["karmaLevel"],
+                            "wentAfk": part["attributes"]["stats"]["wentAfk"],
+                            "firstAfkTime": part["attributes"]["stats"]["firstAfkTime"],
+                            "winner": part["attributes"]["stats"]["winner"],
+                            "skinKey": part["attributes"]["stats"]["skinKey"],
+                            "items": part["attributes"]["stats"]["items"],
+                            "itemGrants": part["attributes"]["stats"]["itemGrants"],
+                            "itemSells": part["attributes"]["stats"]["itemSells"],
+                            "itemUses": part["attributes"]["stats"]["itemUses"],
+                            "player": str(part["relationships"]["player"]["data"]["id"])
+
+                        }
 
                 elif part["type"] == "player":
                     players[str(part["id"])] = {
@@ -366,10 +407,14 @@ class Vainglory(object):
                 m["rosters"] = full
                 m["telemetry"] = assets[m["telemetry"]]
 
+            if self.debugging == True:
+                with open("after.json", "w") as handler:
+                    json.dump(Matches, handler)
+
             return Matches
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING MATCHES --!>")
+            print("<!-- ERROR WHILE FETCHING MATCHES --!>\nERROR:\n" + str(e))
             return {"from": "matches", "error": str(e)}
 
     def _getPlayer(self, region="na", endpoint="matches", elementID=""):
@@ -412,10 +457,14 @@ class Vainglory(object):
                 player["skillTier"] = None
                 player["karmaLevel"] = None
 
+            if self.debugging == True:
+                with open("after.json", "w") as handler:
+                    json.dump(player, handler)
+
             return player
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING PLAYER --!>")
+            print("<!-- ERROR WHILE FETCHING PLAYER --!>\nERROR:\n" + str(e))
             return {"from": "player", "error": str(e)}
 
     def _getPlayers(self, region="na", endpoint="matches", args=None):
@@ -462,10 +511,14 @@ class Vainglory(object):
 
                     players.append(info)
 
+            if self.debugging == True:
+                with open("after.json", "w") as handler:
+                    json.dump(players, handler)
+
             return players
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING PLAYERS --!>")
+            print("<!-- ERROR WHILE FETCHING PLAYERS --!>\nERROR:\n" + str(e))
             return {"from": "players", "error": str(e)}
 
     def _getSamples(self, region="na", endpoint="samples", args=None):
