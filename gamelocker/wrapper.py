@@ -9,6 +9,7 @@ https://github.com/ClarkThyLord/madglory-ezl/wiki
 import logging  # To long events
 import requests  # To call on services
 import json  # To save jsons
+from traceback import format_exc  # To report errors
 
 class Vainglory(object):
     """
@@ -72,8 +73,8 @@ class Vainglory(object):
 
             return http.json()
 
-        except Exception as e:
-            print("ERROR:   " + str(e))
+        except:
+            print("---\nERROR:   " + str(format_exc()) + "\n---")
             return None
 
     def _getMatch(self, region="na", endpoint="matches", elementID=""):
@@ -89,6 +90,10 @@ class Vainglory(object):
         try:
 
             original = self._req("shards/" + str(region) + "/" + str(endpoint) + "/" + str(elementID), None)
+
+            # Player or data wasn't found
+            if original == None:
+                return {"from": "matches", "error": "data wasn't found"}
 
             data = [original["data"]]
             included = original["included"]
@@ -197,6 +202,15 @@ class Vainglory(object):
 
                     }
 
+                    # Try to get the following if not found fill
+                    for key in ["skillTier", "karmaLevel", "elo_earned_season_1", "elo_earned_season_2", "elo_earned_season_3", "elo_earned_season_4", "elo_earned_season_5", "elo_earned_season_6", "elo_earned_season_7"]:
+                        try:
+
+                            players[str(part["id"])][key] = part["attributes"]["stats"][key]
+
+                        except:
+                            players[str(part["id"])][key] = 0
+
                 elif part["type"] == "asset":
                     assets[str(part["id"])] = {
 
@@ -237,9 +251,9 @@ class Vainglory(object):
 
             return Match
 
-        except Exception as e:
-            print("<!-- ERROR WHILE FETCHING MATCH --!>\nERROR:\n" + str(e))
-            return {"from": "match", "error": str(e)}
+        except:
+            print("<!-- ERROR WHILE FETCHING MATCH --!>\nERROR:\n" + str(format_exc()) + "\n---")
+            return {"from": "match", "error": str(format_exc())}
 
     def _getMatches(self, region="na", endpoint="matches", args=None):
         """Get data from api.
@@ -254,6 +268,10 @@ class Vainglory(object):
         try:
 
             original = self._req("shards/" + str(region) + "/" + str(endpoint) + "/", args)
+
+            # Player or data wasn't found
+            if original == None:
+                return {"from": "matches", "error": "data wasn't found"}
 
             data = [original["data"]]
             included = original["included"]
@@ -373,6 +391,15 @@ class Vainglory(object):
 
                     }
 
+                    # Try to get the following if not found fill
+                    for key in ["skillTier", "karmaLevel", "elo_earned_season_1", "elo_earned_season_2", "elo_earned_season_3", "elo_earned_season_4", "elo_earned_season_5", "elo_earned_season_6", "elo_earned_season_7"]:
+                        try:
+
+                            players[str(part["id"])][key] = part["attributes"]["stats"][key]
+
+                        except:
+                            players[str(part["id"])][key] = 0
+
                 elif part["type"] == "asset":
                     assets[str(part["id"])] = {
 
@@ -414,8 +441,8 @@ class Vainglory(object):
             return Matches
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING MATCHES --!>\nERROR:\n" + str(e))
-            return {"from": "matches", "error": str(e)}
+            print("<!-- ERROR WHILE FETCHING MATCHES --!>\nERROR:\n" + str(format_exc()) + "\n---")
+            return {"from": "matches", "error": str(format_exc())}
 
     def _getPlayer(self, region="na", endpoint="matches", elementID=""):
         """Get data from api.
@@ -430,6 +457,10 @@ class Vainglory(object):
         try:
 
             original = self._req("shards/" + str(region) + "/" + str(endpoint) + "/" + str(elementID), None)
+
+            # Player or data wasn't found
+            if original == None:
+                return {"from": "matches", "error": "data wasn't found"}
 
             data = original["data"]
 
@@ -448,14 +479,14 @@ class Vainglory(object):
                 "xp": data["attributes"]["stats"]["xp"],
             }
 
-            try:
+            # Try to get the following if not found fill
+            for key in ["skillTier", "karmaLevel", "elo_earned_season_1", "elo_earned_season_2", "elo_earned_season_3", "elo_earned_season_4", "elo_earned_season_5", "elo_earned_season_6", "elo_earned_season_7"]:
+                try:
 
-                player["skillTier"] = data["attributes"]["stats"]["skillTier"]
-                player["karmaLevel"] = data["attributes"]["stats"]["karmaLevel"]
+                    player[key] = data["attributes"]["stats"][key]
 
-            except:
-                player["skillTier"] = None
-                player["karmaLevel"] = None
+                except:
+                    player[key] = 0
 
             if self.debugging == True:
                 with open("after.json", "w") as handler:
@@ -464,8 +495,8 @@ class Vainglory(object):
             return player
 
         except Exception as e:
-            print("<!-- ERROR WHILE FETCHING PLAYER --!>\nERROR:\n" + str(e))
-            return {"from": "player", "error": str(e)}
+            print("<!-- ERROR WHILE FETCHING PLAYER --!>\nERROR:\n" + str(format_exc()) + "\n---")
+            return {"from": "player", "error": str(format_exc())}
 
     def _getPlayers(self, region="na", endpoint="matches", args=None):
         """Get data from api.
@@ -480,6 +511,10 @@ class Vainglory(object):
         try:
 
             original = self._req("shards/" + str(region) + "/" + str(endpoint) + "/", args)
+
+            # Player or data wasn't found
+            if original == None:
+                return {"from": "matches", "error": "data wasn't found"}
 
             data = original["data"]
 
@@ -500,14 +535,14 @@ class Vainglory(object):
                         "xp": part["attributes"]["stats"]["xp"],
                     }
 
-                    try:
+                    # Try to get the following if not found fill
+                    for key in ["skillTier", "karmaLevel", "elo_earned_season_1", "elo_earned_season_2", "elo_earned_season_3", "elo_earned_season_4", "elo_earned_season_5", "elo_earned_season_6", "elo_earned_season_7"]:
+                        try:
 
-                        info["skillTier"] = part["attributes"]["stats"]["skillTier"]
-                        info["karmaLevel"] = part["attributes"]["stats"]["karmaLevel"]
+                            info[key] = part["attributes"]["stats"][key]
 
-                    except:
-                        info["skillTier"] = None
-                        info["karmaLevel"] = None
+                        except:
+                            info[key] = 0
 
                     players.append(info)
 
@@ -517,9 +552,9 @@ class Vainglory(object):
 
             return players
 
-        except Exception as e:
-            print("<!-- ERROR WHILE FETCHING PLAYERS --!>\nERROR:\n" + str(e))
-            return {"from": "players", "error": str(e)}
+        except:
+            print("<!-- ERROR WHILE FETCHING PLAYERS --!>\nERROR:\n" + str(format_exc()) + "\n---")
+            return {"from": "players", "error": str(format_exc())}
 
     def _getSamples(self, region="na", endpoint="samples", args=None):
         """Get data from api.
