@@ -1,8 +1,8 @@
 """
 
-    Time Diffrence -
+    Fetch Player -
 
-        Small program used to fetch matches data from api and tell when was the latest match in minutes.
+        Small program that retrieves a players data by their id.
 
 """
 

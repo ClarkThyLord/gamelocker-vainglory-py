@@ -1,1 +1,39 @@
-{"data": {"type": "player", "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76", "attributes": {"createdAt": "2017-07-15T21:29:05Z", "name": "ClarkthyLord", "shardId": "na", "stats": {"elo_earned_season_4": 1527.7161290403744, "elo_earned_season_5": 1733.9612117956194, "elo_earned_season_6": 1855.2264302731057, "elo_earned_season_7": 1868.7593797188722, "karmaLevel": 2, "level": 30, "lifetimeGold": 10060.25, "lossStreak": 0, "played": 2921, "played_ranked": 529, "skillTier": 19, "winStreak": 0, "wins": 1499, "xp": 175450}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, "links": {"self": "https://api.dc01.gamelockerapp.com/shards/na/players/99b050b8-cd6b-11e5-b233-06eb725f8a76"}, "meta": {}}
+{
+
+    "data": {
+        "type": "player",
+        "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76",
+        "attributes": {
+            "createdAt": "2017-07-15T21:29:05Z",
+            "name": "ClarkthyLord",
+            "shardId": "na",
+            "stats": {
+                "elo_earned_season_4": 1527.7161290403744,
+                "elo_earned_season_5": 1733.9612117956194,
+                "elo_earned_season_6": 1855.2264302731057,
+                "elo_earned_season_7": 1868.7593797188722,
+                "karmaLevel": 2,
+                "level": 30,
+                "lifetimeGold": 10060.25,
+                "lossStreak": 0,
+                "played": 2921,
+                "played_ranked": 529,
+                "skillTier": 19,
+                "winStreak": 0,
+                "wins": 1499,
+                "xp": 175450
+            },
+            "titleId": "semc-vainglory"
+        },
+        "relationships": {
+            "assets": {
+                "data": [ ]
+            }
+        }
+    },
+    "links": {
+        "self": "https://api.dc01.gamelockerapp.com/shards/na/players/99b050b8-cd6b-11e5-b233-06eb725f8a76"
+    },
+    "meta": { }
+
+}

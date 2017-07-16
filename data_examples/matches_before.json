@@ -1,1 +1,785 @@
-{"data": [{"type": "match", "id": "a8c0ebc4-68e4-11e7-aa6e-0671096b3e30", "attributes": {"createdAt": "2017-07-14T22:35:01Z", "duration": 1136, "gameMode": "ranked", "patchVersion": "2.6", "shardId": "na", "stats": {"endGameReason": "victory", "queue": "ranked"}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": [{"type": "asset", "id": "9ef8c96f-68e7-11e7-b0df-6eca872bb273"}]}, "rosters": {"data": [{"type": "roster", "id": "9e62f417-68e7-11e7-b0df-6eca872bb273"}, {"type": "roster", "id": "9e62f466-68e7-11e7-b0df-6eca872bb273"}]}, "rounds": {"data": []}, "spectators": {"data": []}}}], "included": [{"type": "participant", "id": "9e62f499-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Koshka*", "shardId": "na", "stats": {"assists": 5, "crystalMineCaptures": 0, "deaths": 5, "farm": 81.075, "firstAfkTime": -1, "gold": 11468.5, "goldMineCaptures": 1, "itemGrants": {"*Item_Aegis*": 1, "*Item_Aftershock*": 1, "*Item_BrokenMyth*": 1, "*Item_CoatOfPlates*": 1, "*Item_CrystalBit*": 3, "*Item_CrystalInfusion*": 1, "*Item_EclipsePrism*": 1, "*Item_EnergyBattery*": 1, "*Item_HeavyPrism*": 1, "*Item_Hourglass*": 1, "*Item_KineticShield*": 1, "*Item_LightShield*": 1, "*Item_Oakheart*": 1, "*Item_PiercingShard*": 1, "*Item_ReflexBlock*": 1, "*Item_SprintBoots*": 1, "*Item_TravelBoots*": 1, "*Item_VoidBattery*": 1}, "itemSells": {"*Item_CrystalBit*": 1}, "itemUses": {"*Item_Aegis*": 1, "*Item_CrystalInfusion*": 1, "*Item_HalcyonPotion*": 2, "*Item_ReflexBlock*": 1, "*Item_SprintBoots*": 4, "*Item_TravelBoots*": 1}, "items": ["Broken Myth", "Aftershock", "Travel Boots", "Aegis", "Void Battery", "Coat Of Plates"], "jungleKills": 53, "karmaLevel": 2, "kills": 1, "krakenCaptures": 0, "level": 30, "minionKills": 73, "nonJungleMinionKills": 20, "skillTier": 22, "skinKey": "Koshka_Skin_School", "turretCaptures": 0, "wentAfk": false, "winner": false}}, "relationships": {"player": {"data": {"type": "player", "id": "15ccbf6a-1138-11e5-9d0a-06d90c28bf1a"}}}}, {"type": "participant", "id": "9e633258-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Blackfeather*", "shardId": "na", "stats": {"assists": 4, "crystalMineCaptures": 1, "deaths": 5, "farm": 89.6, "firstAfkTime": -1, "gold": 13538.875, "goldMineCaptures": 0, "itemGrants": {"*Item_Aegis*": 1, "*Item_AtlasPauldron*": 1, "*Item_BrokenMyth*": 1, "*Item_CoatOfPlates*": 1, "*Item_CrystalBit*": 5, "*Item_EclipsePrism*": 1, "*Item_HeavyPrism*": 2, "*Item_KineticShield*": 1, "*Item_LightArmor*": 1, "*Item_LightShield*": 1, "*Item_Oakheart*": 1, "*Item_PiercingShard*": 1, "*Item_ReflexBlock*": 1, "*Item_Shatterglass*": 1, "*Item_SprintBoots*": 1, "*Item_TravelBoots*": 1}, "itemSells": {}, "itemUses": {"*Item_AtlasPauldron*": 1, "*Item_HalcyonPotion*": 2, "*Item_ReflexBlock*": 2, "*Item_SprintBoots*": 2, "*Item_TravelBoots*": 5}, "items": ["Aegis", "Shatterglass", "Broken Myth", "Travel Boots", "Atlas Pauldron", "Crystal Bit"], "jungleKills": 70, "karmaLevel": 2, "kills": 6, "krakenCaptures": 1, "level": 30, "minionKills": 72, "nonJungleMinionKills": 2, "skillTier": 23, "skinKey": "Blackfeather_Skin_Vamp", "turretCaptures": 2, "wentAfk": false, "winner": true}}, "relationships": {"player": {"data": {"type": "player", "id": "6fa8e808-73a7-11e4-a941-06d90c28bf1a"}}}}, {"type": "roster", "id": "9e62f466-68e7-11e7-b0df-6eca872bb273", "attributes": {"shardId": "na", "stats": {"acesEarned": 2, "gold": 39514, "heroKills": 11, "krakenCaptures": 1, "side": "right/red", "turretKills": 5, "turretsRemaining": 4}, "won": "true"}, "relationships": {"participants": {"data": [{"type": "participant", "id": "9e63006b-68e7-11e7-b0df-6eca872bb273"}, {"type": "participant", "id": "9e632580-68e7-11e7-b0df-6eca872bb273"}, {"type": "participant", "id": "9e633258-68e7-11e7-b0df-6eca872bb273"}]}, "team": {"data": null}}}, {"type": "player", "id": "008241bc-c1e0-11e5-9028-06d90c28bf1a", "attributes": {"name": "alex1117", "shardId": "na", "stats": {"elo_earned_season_4": 1162.181963202269, "elo_earned_season_5": 1583.594241716752, "elo_earned_season_6": 1303.6886943158056, "elo_earned_season_7": 1587.341855082925, "karmaLevel": 1, "level": 30, "lifetimeGold": 11475.5, "lossStreak": 0, "played": 3796, "played_ranked": 2009, "skillTier": 22, "winStreak": 0, "wins": 1527, "xp": 175450}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "player", "id": "4fe58fe2-f1a2-11e5-aa10-06b48b82cd49", "attributes": {"name": "ZombiePolloo", "shardId": "na", "stats": {"elo_earned_season_4": 0, "elo_earned_season_5": 0, "elo_earned_season_6": 0, "elo_earned_season_7": 1592.8381514398652, "karmaLevel": 2, "level": 29, "lifetimeGold": 14656.5, "lossStreak": 0, "played": 1244, "played_ranked": 616, "skillTier": 23, "winStreak": 0, "wins": 942, "xp": 156847}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "player", "id": "6fa8e808-73a7-11e4-a941-06d90c28bf1a", "attributes": {"name": "chopstick1000", "shardId": "na", "stats": {"elo_earned_season_4": 1576.7296850997186, "elo_earned_season_5": 1604.808148213906, "elo_earned_season_6": 1778.2212697206987, "elo_earned_season_7": 1903.0046334761194, "karmaLevel": 2, "level": 30, "lifetimeGold": 13538.875, "lossStreak": 0, "played": 5203, "played_ranked": 1151, "skillTier": 23, "winStreak": 0, "wins": 3104, "xp": 175450}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "participant", "id": "9e6317e0-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Gwen*", "shardId": "na", "stats": {"assists": 2, "crystalMineCaptures": 0, "deaths": 3, "farm": 142.225, "firstAfkTime": -1, "gold": 14656.5, "goldMineCaptures": 1, "itemGrants": {"*Item_Aegis*": 1, "*Item_BookOfEulogies*": 1, "*Item_CoatOfPlates*": 1, "*Item_HalcyonPotion*": 6, "*Item_JourneyBoots*": 1, "*Item_LightShield*": 1, "*Item_LuckyStrike*": 1, "*Item_PiercingSpear*": 1, "*Item_PoisonedShiv*": 1, "*Item_ReflexBlock*": 1, "*Item_SixSins*": 2, "*Item_Sorrowblade*": 1, "*Item_SprintBoots*": 1, "*Item_TensionBow*": 1, "*Item_TravelBoots*": 1, "*Item_WeaponBlade*": 1, "*Item_WeaponInfusion*": 2}, "itemSells": {"*Item_LuckyStrike*": 1}, "itemUses": {"*Item_Aegis*": 4, "*Item_HalcyonPotion*": 8, "*Item_JourneyBoots*": 2, "*Item_ReflexBlock*": 3, "*Item_SprintBoots*": 3, "*Item_TravelBoots*": 1, "*Item_WeaponInfusion*": 2}, "items": ["Tension Bow", "Journey Boots", "Poisoned Shiv", "Aegis", "Coat Of Plates", "Sorrowblade"], "jungleKills": 4, "karmaLevel": 2, "kills": 7, "krakenCaptures": 0, "level": 29, "minionKills": 114, "nonJungleMinionKills": 110, "skillTier": 23, "skinKey": "Gwen_Skin_Hitman", "turretCaptures": 1, "wentAfk": false, "winner": false}}, "relationships": {"player": {"data": {"type": "player", "id": "4fe58fe2-f1a2-11e5-aa10-06b48b82cd49"}}}}, {"type": "player", "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76", "attributes": {"name": "ClarkthyLord", "shardId": "na", "stats": {"elo_earned_season_4": 1527.7161290403744, "elo_earned_season_5": 1733.9612117956194, "elo_earned_season_6": 1855.2264302731057, "elo_earned_season_7": 1868.7593797188722, "karmaLevel": 2, "level": 30, "lifetimeGold": 12341.5, "lossStreak": 0, "played": 2915, "played_ranked": 524, "skillTier": 19, "winStreak": 0, "wins": 1494, "xp": 175450}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "participant", "id": "9e63006b-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Vox*", "shardId": "na", "stats": {"assists": 5, "crystalMineCaptures": 0, "deaths": 4, "farm": 131, "firstAfkTime": -1, "gold": 13635.625, "goldMineCaptures": 0, "itemGrants": {"*Item_Aegis*": 1, "*Item_BarbedNeedle*": 1, "*Item_BlazingSalvo*": 2, "*Item_BookOfEulogies*": 1, "*Item_BreakingPoint*": 1, "*Item_CoatOfPlates*": 1, "*Item_EnergyBattery*": 1, "*Item_HalcyonChargers*": 1, "*Item_HalcyonPotion*": 2, "*Item_LightArmor*": 1, "*Item_LightShield*": 1, "*Item_Oakheart*": 1, "*Item_PiercingSpear*": 1, "*Item_PoisonedShiv*": 1, "*Item_ReflexBlock*": 1, "*Item_SixSins*": 1, "*Item_SprintBoots*": 1, "*Item_SwiftShooter*": 2, "*Item_TensionBow*": 1, "*Item_TravelBoots*": 1, "*Item_VoidBattery*": 1, "*Item_WeaponBlade*": 1}, "itemSells": {}, "itemUses": {"*Item_Aegis*": 2, "*Item_HalcyonChargers*": 3, "*Item_HalcyonPotion*": 4, "*Item_ReflexBlock*": 5, "*Item_SprintBoots*": 3}, "items": ["Tension Bow", "Halcyon Chargers", "Poisoned Shiv", "Aegis", "Coat Of Plates", "Breaking Point"], "jungleKills": 1, "karmaLevel": 2, "kills": 4, "krakenCaptures": 1, "level": 29, "minionKills": 107, "nonJungleMinionKills": 106, "skillTier": 22, "skinKey": "Vox_Skin_School", "turretCaptures": 5, "wentAfk": false, "winner": true}}, "relationships": {"player": {"data": {"type": "player", "id": "eaa6526c-387c-11e5-a296-06d90c28bf1a"}}}}, {"type": "participant", "id": "9e632580-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Lyra*", "shardId": "na", "stats": {"assists": 7, "crystalMineCaptures": 1, "deaths": 0, "farm": 18.35, "firstAfkTime": -1, "gold": 12341.5, "goldMineCaptures": 0, "itemGrants": {"*Item_Chronograph*": 1, "*Item_Clockwork*": 1, "*Item_Contraption*": 1, "*Item_Crucible*": 1, "*Item_Dragonheart*": 1, "*Item_Flaregun*": 1, "*Item_FountainOfRenewal*": 1, "*Item_HalcyonPotion*": 1, "*Item_IronguardContract*": 1, "*Item_KineticShield*": 1, "*Item_Lifespring*": 1, "*Item_LightShield*": 1, "*Item_Oakheart*": 4, "*Item_ReflexBlock*": 1, "*Item_SprintBoots*": 1, "*Item_TravelBoots*": 1, "*Item_WarTreads*": 1}, "itemSells": {"*Item_IronguardContract*": 1}, "itemUses": {"*Item_Contraption*": 6, "*Item_Crucible*": 5, "*Item_Flaregun*": 6, "*Item_FountainOfRenewal*": 5, "*Item_HalcyonPotion*": 3, "*Item_SprintBoots*": 1, "*Item_TravelBoots*": 2, "*Item_WarTreads*": 1}, "items": ["Clockwork", "Fountain of Renewal", "War Treads", "Crucible", "Contraption", "Chronograph"], "jungleKills": 2, "karmaLevel": 2, "kills": 1, "krakenCaptures": 1, "level": 30, "minionKills": 14, "nonJungleMinionKills": 12, "skillTier": 19, "skinKey": "Lyra_Skin_Unicorn", "turretCaptures": 3, "wentAfk": false, "winner": true}}, "relationships": {"player": {"data": {"type": "player", "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76"}}}}, {"type": "player", "id": "15ccbf6a-1138-11e5-9d0a-06d90c28bf1a", "attributes": {"name": "hemaxo", "shardId": "na", "stats": {"elo_earned_season_4": 1538.5086591895747, "elo_earned_season_5": 1505.5431127498168, "elo_earned_season_6": 1541.130111816418, "elo_earned_season_7": 1810.449998117164, "karmaLevel": 2, "level": 30, "lifetimeGold": 11468.5, "lossStreak": 0, "played": 3793, "played_ranked": 1512, "skillTier": 22, "winStreak": 0, "wins": 1483, "xp": 175450}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "participant", "id": "9e630c91-68e7-11e7-b0df-6eca872bb273", "attributes": {"actor": "*Ardan*", "shardId": "na", "stats": {"assists": 8, "crystalMineCaptures": 0, "deaths": 3, "farm": 16, "firstAfkTime": -1, "gold": 11475.5, "goldMineCaptures": 1, "itemGrants": {"*Item_CandyShop_Kissy*": 2, "*Item_CandyShop_Taunt*": 2, "*Item_CandyShop_VOTaunt*": 2, "*Item_Chronograph*": 2, "*Item_Contraption*": 1, "*Item_Crucible*": 1, "*Item_Dragonheart*": 2, "*Item_Flaregun*": 1, "*Item_FountainOfRenewal*": 1, "*Item_Hourglass*": 2, "*Item_IronguardContract*": 1, "*Item_KineticShield*": 1, "*Item_Oakheart*": 3, "*Item_ReflexBlock*": 1, "*Item_ScoutTrap*": 6, "*Item_SprintBoots*": 1, "*Item_Stormcrown*": 1, "*Item_StormguardBanner*": 1, "*Item_TravelBoots*": 1, "*Item_WarTreads*": 1}, "itemSells": {"*Item_IronguardContract*": 1}, "itemUses": {"*Item_CandyShop_Kissy*": 2, "*Item_CandyShop_Taunt*": 2, "*Item_CandyShop_VOTaunt*": 2, "*Item_Contraption*": 6, "*Item_Crucible*": 4, "*Item_Flaregun*": 6, "*Item_FountainOfRenewal*": 7, "*Item_HalcyonPotion*": 2, "*Item_ReflexBlock*": 1, "*Item_ScoutTrap*": 6, "*Item_SprintBoots*": 1, "*Item_WarTreads*": 4}, "items": ["Fountain of Renewal", "War Treads", "Crucible", "Contraption", "Stormcrown"], "jungleKills": 0, "karmaLevel": 1, "kills": 1, "krakenCaptures": 0, "level": 30, "minionKills": 13, "nonJungleMinionKills": 13, "skillTier": 22, "skinKey": "Ardan_Skin_Glad", "turretCaptures": 0, "wentAfk": false, "winner": false}}, "relationships": {"player": {"data": {"type": "player", "id": "008241bc-c1e0-11e5-9028-06d90c28bf1a"}}}}, {"type": "asset", "id": "9ef8c96f-68e7-11e7-b0df-6eca872bb273", "attributes": {"URL": "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/07/14/22/56/9ef8c96f-68e7-11e7-b0df-6eca872bb273-telemetry.json", "contentType": "application/json", "createdAt": "2017-07-14T22:56:07Z", "description": "", "filename": "telemetry.json", "name": "telemetry"}}, {"type": "player", "id": "eaa6526c-387c-11e5-a296-06d90c28bf1a", "attributes": {"name": "Shadowstrike23", "shardId": "na", "stats": {"elo_earned_season_4": 0, "elo_earned_season_5": 295.73599257823895, "elo_earned_season_6": 522.7974010824494, "elo_earned_season_7": 1478.2083020433845, "karmaLevel": 2, "level": 29, "lifetimeGold": 13635.625, "lossStreak": 0, "played": 2198, "played_ranked": 1049, "skillTier": 22, "winStreak": 0, "wins": 950, "xp": 145741}, "titleId": "semc-vainglory"}, "relationships": {"assets": {"data": []}}}, {"type": "roster", "id": "9e62f417-68e7-11e7-b0df-6eca872bb273", "attributes": {"shardId": "na", "stats": {"acesEarned": 0, "gold": 37599, "heroKills": 9, "krakenCaptures": 0, "side": "left/blue", "turretKills": 1, "turretsRemaining": 0}, "won": "false"}, "relationships": {"participants": {"data": [{"type": "participant", "id": "9e62f499-68e7-11e7-b0df-6eca872bb273"}, {"type": "participant", "id": "9e630c91-68e7-11e7-b0df-6eca872bb273"}, {"type": "participant", "id": "9e6317e0-68e7-11e7-b0df-6eca872bb273"}]}, "team": {"data": null}}}], "links": {"next": "https://api.dc01.gamelockerapp.com/shards/na/matches?filter[createdAt-start]=2017-06-17T00:00:00Z&filter[playerNames]=ClarkthyLord&page[limit]=1&page[offset]=1&sort=-createdAt", "self": "https://api.dc01.gamelockerapp.com/shards/na/matches?filter[createdAt-start]=2017-06-17T00:00:00Z&filter[playerNames]=ClarkthyLord&page[limit]=1&sort=-createdAt"}, "meta": {}}
+{
+
+    "data": [
+        {
+            "type": "match",
+            "id": "a8c0ebc4-68e4-11e7-aa6e-0671096b3e30",
+            "attributes": {
+                "createdAt": "2017-07-14T22:35:01Z",
+                "duration": 1136,
+                "gameMode": "ranked",
+                "patchVersion": "2.6",
+                "shardId": "na",
+                "stats": {
+                    "endGameReason": "victory",
+                    "queue": "ranked"
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [
+                        {
+                            "type": "asset",
+                            "id": "9ef8c96f-68e7-11e7-b0df-6eca872bb273"
+                        }
+                    ]
+                },
+                "rosters": {
+                    "data": [
+                        {
+                            "type": "roster",
+                            "id": "9e62f417-68e7-11e7-b0df-6eca872bb273"
+                        },
+                        {
+                            "type": "roster",
+                            "id": "9e62f466-68e7-11e7-b0df-6eca872bb273"
+                        }
+                    ]
+                },
+                "rounds": {
+                    "data": [ ]
+                },
+                "spectators": {
+                    "data": [ ]
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "type": "participant",
+            "id": "9e62f499-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Koshka*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 5,
+                    "crystalMineCaptures": 0,
+                    "deaths": 5,
+                    "farm": 81.075,
+                    "firstAfkTime": -1,
+                    "gold": 11468.5,
+                    "goldMineCaptures": 1,
+                    "itemGrants": {
+                        "*Item_Aegis*": 1,
+                        "*Item_Aftershock*": 1,
+                        "*Item_BrokenMyth*": 1,
+                        "*Item_CoatOfPlates*": 1,
+                        "*Item_CrystalBit*": 3,
+                        "*Item_CrystalInfusion*": 1,
+                        "*Item_EclipsePrism*": 1,
+                        "*Item_EnergyBattery*": 1,
+                        "*Item_HeavyPrism*": 1,
+                        "*Item_Hourglass*": 1,
+                        "*Item_KineticShield*": 1,
+                        "*Item_LightShield*": 1,
+                        "*Item_Oakheart*": 1,
+                        "*Item_PiercingShard*": 1,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_VoidBattery*": 1
+                    },
+                    "itemSells": {
+                        "*Item_CrystalBit*": 1
+                    },
+                    "itemUses": {
+                        "*Item_Aegis*": 1,
+                        "*Item_CrystalInfusion*": 1,
+                        "*Item_HalcyonPotion*": 2,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_SprintBoots*": 4,
+                        "*Item_TravelBoots*": 1
+                    },
+                    "items": [
+                        "Broken Myth",
+                        "Aftershock",
+                        "Travel Boots",
+                        "Aegis",
+                        "Void Battery",
+                        "Coat Of Plates"
+                    ],
+                    "jungleKills": 53,
+                    "karmaLevel": 2,
+                    "kills": 1,
+                    "krakenCaptures": 0,
+                    "level": 30,
+                    "minionKills": 73,
+                    "nonJungleMinionKills": 20,
+                    "skillTier": 22,
+                    "skinKey": "Koshka_Skin_School",
+                    "turretCaptures": 0,
+                    "wentAfk": false,
+                    "winner": false
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "15ccbf6a-1138-11e5-9d0a-06d90c28bf1a"
+                    }
+                }
+            }
+        },
+        {
+            "type": "participant",
+            "id": "9e633258-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Blackfeather*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 4,
+                    "crystalMineCaptures": 1,
+                    "deaths": 5,
+                    "farm": 89.6,
+                    "firstAfkTime": -1,
+                    "gold": 13538.875,
+                    "goldMineCaptures": 0,
+                    "itemGrants": {
+                        "*Item_Aegis*": 1,
+                        "*Item_AtlasPauldron*": 1,
+                        "*Item_BrokenMyth*": 1,
+                        "*Item_CoatOfPlates*": 1,
+                        "*Item_CrystalBit*": 5,
+                        "*Item_EclipsePrism*": 1,
+                        "*Item_HeavyPrism*": 2,
+                        "*Item_KineticShield*": 1,
+                        "*Item_LightArmor*": 1,
+                        "*Item_LightShield*": 1,
+                        "*Item_Oakheart*": 1,
+                        "*Item_PiercingShard*": 1,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_Shatterglass*": 1,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_TravelBoots*": 1
+                    },
+                    "itemSells": { },
+                    "itemUses": {
+                        "*Item_AtlasPauldron*": 1,
+                        "*Item_HalcyonPotion*": 2,
+                        "*Item_ReflexBlock*": 2,
+                        "*Item_SprintBoots*": 2,
+                        "*Item_TravelBoots*": 5
+                    },
+                    "items": [
+                        "Aegis",
+                        "Shatterglass",
+                        "Broken Myth",
+                        "Travel Boots",
+                        "Atlas Pauldron",
+                        "Crystal Bit"
+                    ],
+                    "jungleKills": 70,
+                    "karmaLevel": 2,
+                    "kills": 6,
+                    "krakenCaptures": 1,
+                    "level": 30,
+                    "minionKills": 72,
+                    "nonJungleMinionKills": 2,
+                    "skillTier": 23,
+                    "skinKey": "Blackfeather_Skin_Vamp",
+                    "turretCaptures": 2,
+                    "wentAfk": false,
+                    "winner": true
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "6fa8e808-73a7-11e4-a941-06d90c28bf1a"
+                    }
+                }
+            }
+        },
+        {
+            "type": "roster",
+            "id": "9e62f466-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "shardId": "na",
+                "stats": {
+                    "acesEarned": 2,
+                    "gold": 39514,
+                    "heroKills": 11,
+                    "krakenCaptures": 1,
+                    "side": "right/red",
+                    "turretKills": 5,
+                    "turretsRemaining": 4
+                },
+                "won": "true"
+            },
+            "relationships": {
+                "participants": {
+                    "data": [
+                        {
+                            "type": "participant",
+                            "id": "9e63006b-68e7-11e7-b0df-6eca872bb273"
+                        },
+                        {
+                            "type": "participant",
+                            "id": "9e632580-68e7-11e7-b0df-6eca872bb273"
+                        },
+                        {
+                            "type": "participant",
+                            "id": "9e633258-68e7-11e7-b0df-6eca872bb273"
+                        }
+                    ]
+                },
+                "team": {
+                    "data": null
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "008241bc-c1e0-11e5-9028-06d90c28bf1a",
+            "attributes": {
+                "name": "alex1117",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 1162.181963202269,
+                    "elo_earned_season_5": 1583.594241716752,
+                    "elo_earned_season_6": 1303.6886943158056,
+                    "elo_earned_season_7": 1587.341855082925,
+                    "karmaLevel": 1,
+                    "level": 30,
+                    "lifetimeGold": 11475.5,
+                    "lossStreak": 0,
+                    "played": 3796,
+                    "played_ranked": 2009,
+                    "skillTier": 22,
+                    "winStreak": 0,
+                    "wins": 1527,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "4fe58fe2-f1a2-11e5-aa10-06b48b82cd49",
+            "attributes": {
+                "name": "ZombiePolloo",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 0,
+                    "elo_earned_season_5": 0,
+                    "elo_earned_season_6": 0,
+                    "elo_earned_season_7": 1592.8381514398652,
+                    "karmaLevel": 2,
+                    "level": 29,
+                    "lifetimeGold": 14656.5,
+                    "lossStreak": 0,
+                    "played": 1244,
+                    "played_ranked": 616,
+                    "skillTier": 23,
+                    "winStreak": 0,
+                    "wins": 942,
+                    "xp": 156847
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "6fa8e808-73a7-11e4-a941-06d90c28bf1a",
+            "attributes": {
+                "name": "chopstick1000",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 1576.7296850997186,
+                    "elo_earned_season_5": 1604.808148213906,
+                    "elo_earned_season_6": 1778.2212697206987,
+                    "elo_earned_season_7": 1903.0046334761194,
+                    "karmaLevel": 2,
+                    "level": 30,
+                    "lifetimeGold": 13538.875,
+                    "lossStreak": 0,
+                    "played": 5203,
+                    "played_ranked": 1151,
+                    "skillTier": 23,
+                    "winStreak": 0,
+                    "wins": 3104,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "participant",
+            "id": "9e6317e0-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Gwen*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 2,
+                    "crystalMineCaptures": 0,
+                    "deaths": 3,
+                    "farm": 142.225,
+                    "firstAfkTime": -1,
+                    "gold": 14656.5,
+                    "goldMineCaptures": 1,
+                    "itemGrants": {
+                        "*Item_Aegis*": 1,
+                        "*Item_BookOfEulogies*": 1,
+                        "*Item_CoatOfPlates*": 1,
+                        "*Item_HalcyonPotion*": 6,
+                        "*Item_JourneyBoots*": 1,
+                        "*Item_LightShield*": 1,
+                        "*Item_LuckyStrike*": 1,
+                        "*Item_PiercingSpear*": 1,
+                        "*Item_PoisonedShiv*": 1,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_SixSins*": 2,
+                        "*Item_Sorrowblade*": 1,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_TensionBow*": 1,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_WeaponBlade*": 1,
+                        "*Item_WeaponInfusion*": 2
+                    },
+                    "itemSells": {
+                        "*Item_LuckyStrike*": 1
+                    },
+                    "itemUses": {
+                        "*Item_Aegis*": 4,
+                        "*Item_HalcyonPotion*": 8,
+                        "*Item_JourneyBoots*": 2,
+                        "*Item_ReflexBlock*": 3,
+                        "*Item_SprintBoots*": 3,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_WeaponInfusion*": 2
+                    },
+                    "items": [
+                        "Tension Bow",
+                        "Journey Boots",
+                        "Poisoned Shiv",
+                        "Aegis",
+                        "Coat Of Plates",
+                        "Sorrowblade"
+                    ],
+                    "jungleKills": 4,
+                    "karmaLevel": 2,
+                    "kills": 7,
+                    "krakenCaptures": 0,
+                    "level": 29,
+                    "minionKills": 114,
+                    "nonJungleMinionKills": 110,
+                    "skillTier": 23,
+                    "skinKey": "Gwen_Skin_Hitman",
+                    "turretCaptures": 1,
+                    "wentAfk": false,
+                    "winner": false
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "4fe58fe2-f1a2-11e5-aa10-06b48b82cd49"
+                    }
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76",
+            "attributes": {
+                "name": "ClarkthyLord",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 1527.7161290403744,
+                    "elo_earned_season_5": 1733.9612117956194,
+                    "elo_earned_season_6": 1855.2264302731057,
+                    "elo_earned_season_7": 1868.7593797188722,
+                    "karmaLevel": 2,
+                    "level": 30,
+                    "lifetimeGold": 12341.5,
+                    "lossStreak": 0,
+                    "played": 2915,
+                    "played_ranked": 524,
+                    "skillTier": 19,
+                    "winStreak": 0,
+                    "wins": 1494,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "participant",
+            "id": "9e63006b-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Vox*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 5,
+                    "crystalMineCaptures": 0,
+                    "deaths": 4,
+                    "farm": 131,
+                    "firstAfkTime": -1,
+                    "gold": 13635.625,
+                    "goldMineCaptures": 0,
+                    "itemGrants": {
+                        "*Item_Aegis*": 1,
+                        "*Item_BarbedNeedle*": 1,
+                        "*Item_BlazingSalvo*": 2,
+                        "*Item_BookOfEulogies*": 1,
+                        "*Item_BreakingPoint*": 1,
+                        "*Item_CoatOfPlates*": 1,
+                        "*Item_EnergyBattery*": 1,
+                        "*Item_HalcyonChargers*": 1,
+                        "*Item_HalcyonPotion*": 2,
+                        "*Item_LightArmor*": 1,
+                        "*Item_LightShield*": 1,
+                        "*Item_Oakheart*": 1,
+                        "*Item_PiercingSpear*": 1,
+                        "*Item_PoisonedShiv*": 1,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_SixSins*": 1,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_SwiftShooter*": 2,
+                        "*Item_TensionBow*": 1,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_VoidBattery*": 1,
+                        "*Item_WeaponBlade*": 1
+                    },
+                    "itemSells": { },
+                    "itemUses": {
+                        "*Item_Aegis*": 2,
+                        "*Item_HalcyonChargers*": 3,
+                        "*Item_HalcyonPotion*": 4,
+                        "*Item_ReflexBlock*": 5,
+                        "*Item_SprintBoots*": 3
+                    },
+                    "items": [
+                        "Tension Bow",
+                        "Halcyon Chargers",
+                        "Poisoned Shiv",
+                        "Aegis",
+                        "Coat Of Plates",
+                        "Breaking Point"
+                    ],
+                    "jungleKills": 1,
+                    "karmaLevel": 2,
+                    "kills": 4,
+                    "krakenCaptures": 1,
+                    "level": 29,
+                    "minionKills": 107,
+                    "nonJungleMinionKills": 106,
+                    "skillTier": 22,
+                    "skinKey": "Vox_Skin_School",
+                    "turretCaptures": 5,
+                    "wentAfk": false,
+                    "winner": true
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "eaa6526c-387c-11e5-a296-06d90c28bf1a"
+                    }
+                }
+            }
+        },
+        {
+            "type": "participant",
+            "id": "9e632580-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Lyra*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 7,
+                    "crystalMineCaptures": 1,
+                    "deaths": 0,
+                    "farm": 18.35,
+                    "firstAfkTime": -1,
+                    "gold": 12341.5,
+                    "goldMineCaptures": 0,
+                    "itemGrants": {
+                        "*Item_Chronograph*": 1,
+                        "*Item_Clockwork*": 1,
+                        "*Item_Contraption*": 1,
+                        "*Item_Crucible*": 1,
+                        "*Item_Dragonheart*": 1,
+                        "*Item_Flaregun*": 1,
+                        "*Item_FountainOfRenewal*": 1,
+                        "*Item_HalcyonPotion*": 1,
+                        "*Item_IronguardContract*": 1,
+                        "*Item_KineticShield*": 1,
+                        "*Item_Lifespring*": 1,
+                        "*Item_LightShield*": 1,
+                        "*Item_Oakheart*": 4,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_WarTreads*": 1
+                    },
+                    "itemSells": {
+                        "*Item_IronguardContract*": 1
+                    },
+                    "itemUses": {
+                        "*Item_Contraption*": 6,
+                        "*Item_Crucible*": 5,
+                        "*Item_Flaregun*": 6,
+                        "*Item_FountainOfRenewal*": 5,
+                        "*Item_HalcyonPotion*": 3,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_TravelBoots*": 2,
+                        "*Item_WarTreads*": 1
+                    },
+                    "items": [
+                        "Clockwork",
+                        "Fountain of Renewal",
+                        "War Treads",
+                        "Crucible",
+                        "Contraption",
+                        "Chronograph"
+                    ],
+                    "jungleKills": 2,
+                    "karmaLevel": 2,
+                    "kills": 1,
+                    "krakenCaptures": 1,
+                    "level": 30,
+                    "minionKills": 14,
+                    "nonJungleMinionKills": 12,
+                    "skillTier": 19,
+                    "skinKey": "Lyra_Skin_Unicorn",
+                    "turretCaptures": 3,
+                    "wentAfk": false,
+                    "winner": true
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "99b050b8-cd6b-11e5-b233-06eb725f8a76"
+                    }
+                }
+            }
+        },
+        {
+            "type": "player",
+            "id": "15ccbf6a-1138-11e5-9d0a-06d90c28bf1a",
+            "attributes": {
+                "name": "hemaxo",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 1538.5086591895747,
+                    "elo_earned_season_5": 1505.5431127498168,
+                    "elo_earned_season_6": 1541.130111816418,
+                    "elo_earned_season_7": 1810.449998117164,
+                    "karmaLevel": 2,
+                    "level": 30,
+                    "lifetimeGold": 11468.5,
+                    "lossStreak": 0,
+                    "played": 3793,
+                    "played_ranked": 1512,
+                    "skillTier": 22,
+                    "winStreak": 0,
+                    "wins": 1483,
+                    "xp": 175450
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "participant",
+            "id": "9e630c91-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "actor": "*Ardan*",
+                "shardId": "na",
+                "stats": {
+                    "assists": 8,
+                    "crystalMineCaptures": 0,
+                    "deaths": 3,
+                    "farm": 16,
+                    "firstAfkTime": -1,
+                    "gold": 11475.5,
+                    "goldMineCaptures": 1,
+                    "itemGrants": {
+                        "*Item_CandyShop_Kissy*": 2,
+                        "*Item_CandyShop_Taunt*": 2,
+                        "*Item_CandyShop_VOTaunt*": 2,
+                        "*Item_Chronograph*": 2,
+                        "*Item_Contraption*": 1,
+                        "*Item_Crucible*": 1,
+                        "*Item_Dragonheart*": 2,
+                        "*Item_Flaregun*": 1,
+                        "*Item_FountainOfRenewal*": 1,
+                        "*Item_Hourglass*": 2,
+                        "*Item_IronguardContract*": 1,
+                        "*Item_KineticShield*": 1,
+                        "*Item_Oakheart*": 3,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_ScoutTrap*": 6,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_Stormcrown*": 1,
+                        "*Item_StormguardBanner*": 1,
+                        "*Item_TravelBoots*": 1,
+                        "*Item_WarTreads*": 1
+                    },
+                    "itemSells": {
+                        "*Item_IronguardContract*": 1
+                    },
+                    "itemUses": {
+                        "*Item_CandyShop_Kissy*": 2,
+                        "*Item_CandyShop_Taunt*": 2,
+                        "*Item_CandyShop_VOTaunt*": 2,
+                        "*Item_Contraption*": 6,
+                        "*Item_Crucible*": 4,
+                        "*Item_Flaregun*": 6,
+                        "*Item_FountainOfRenewal*": 7,
+                        "*Item_HalcyonPotion*": 2,
+                        "*Item_ReflexBlock*": 1,
+                        "*Item_ScoutTrap*": 6,
+                        "*Item_SprintBoots*": 1,
+                        "*Item_WarTreads*": 4
+                    },
+                    "items": [
+                        "Fountain of Renewal",
+                        "War Treads",
+                        "Crucible",
+                        "Contraption",
+                        "Stormcrown"
+                    ],
+                    "jungleKills": 0,
+                    "karmaLevel": 1,
+                    "kills": 1,
+                    "krakenCaptures": 0,
+                    "level": 30,
+                    "minionKills": 13,
+                    "nonJungleMinionKills": 13,
+                    "skillTier": 22,
+                    "skinKey": "Ardan_Skin_Glad",
+                    "turretCaptures": 0,
+                    "wentAfk": false,
+                    "winner": false
+                }
+            },
+            "relationships": {
+                "player": {
+                    "data": {
+                        "type": "player",
+                        "id": "008241bc-c1e0-11e5-9028-06d90c28bf1a"
+                    }
+                }
+            }
+        },
+        {
+            "type": "asset",
+            "id": "9ef8c96f-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "URL": "https://gl-prod-us-east-1.s3.amazonaws.com/assets/semc-vainglory/na/2017/07/14/22/56/9ef8c96f-68e7-11e7-b0df-6eca872bb273-telemetry.json",
+                "contentType": "application/json",
+                "createdAt": "2017-07-14T22:56:07Z",
+                "description": "",
+                "filename": "telemetry.json",
+                "name": "telemetry"
+            }
+        },
+        {
+            "type": "player",
+            "id": "eaa6526c-387c-11e5-a296-06d90c28bf1a",
+            "attributes": {
+                "name": "Shadowstrike23",
+                "shardId": "na",
+                "stats": {
+                    "elo_earned_season_4": 0,
+                    "elo_earned_season_5": 295.73599257823895,
+                    "elo_earned_season_6": 522.7974010824494,
+                    "elo_earned_season_7": 1478.2083020433845,
+                    "karmaLevel": 2,
+                    "level": 29,
+                    "lifetimeGold": 13635.625,
+                    "lossStreak": 0,
+                    "played": 2198,
+                    "played_ranked": 1049,
+                    "skillTier": 22,
+                    "winStreak": 0,
+                    "wins": 950,
+                    "xp": 145741
+                },
+                "titleId": "semc-vainglory"
+            },
+            "relationships": {
+                "assets": {
+                    "data": [ ]
+                }
+            }
+        },
+        {
+            "type": "roster",
+            "id": "9e62f417-68e7-11e7-b0df-6eca872bb273",
+            "attributes": {
+                "shardId": "na",
+                "stats": {
+                    "acesEarned": 0,
+                    "gold": 37599,
+                    "heroKills": 9,
+                    "krakenCaptures": 0,
+                    "side": "left/blue",
+                    "turretKills": 1,
+                    "turretsRemaining": 0
+                },
+                "won": "false"
+            },
+            "relationships": {
+                "participants": {
+                    "data": [
+                        {
+                            "type": "participant",
+                            "id": "9e62f499-68e7-11e7-b0df-6eca872bb273"
+                        },
+                        {
+                            "type": "participant",
+                            "id": "9e630c91-68e7-11e7-b0df-6eca872bb273"
+                        },
+                        {
+                            "type": "participant",
+                            "id": "9e6317e0-68e7-11e7-b0df-6eca872bb273"
+                        }
+                    ]
+                },
+                "team": {
+                    "data": null
+                }
+            }
+        }
+    ],
+    "links": {
+        "next": "https://api.dc01.gamelockerapp.com/shards/na/matches?filter[createdAt-start]=2017-06-17T00:00:00Z&filter[playerNames]=ClarkthyLord&page[limit]=1&page[offset]=1&sort=-createdAt",
+        "self": "https://api.dc01.gamelockerapp.com/shards/na/matches?filter[createdAt-start]=2017-06-17T00:00:00Z&filter[playerNames]=ClarkthyLord&page[limit]=1&sort=-createdAt"
+    },
+    "meta": { }
+
+}
