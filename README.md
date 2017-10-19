@@ -25,6 +25,4 @@ Install our wrapper and all it's dependencies with the following command:
 >>> pip install madglory-ezl
 ```
 
-Notice
-=====
-**Wrapper is still in alpha expect multiple bugs and changes!**
+## NO LONGER MAINTAINED
